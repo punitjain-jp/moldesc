@@ -21,8 +21,10 @@ def desc_calc():
     ndesc = desc.shape[1]
     def header():
         st.markdown(f'<p style="background-color:#076931;color:#f2eae4;font-size:24px;border-radius:6%">{st.info("Selected fingerprint: " + user_fp)
-    st.info("Number of molecules: " + str(nmol))
-    st.info("Number of descriptors: " + str(ndesc-1))}</p>', unsafe_allow_html=True)
+                                                                                                         st.info("Number of molecules: " + str(nmol))
+                                                                                                         st.info("Number of descriptors: " + str(ndesc-1))}
+                                                                                                         </p>', unsafe_allow_html=True
+                   )
 
     os.remove('molecule.smi')
 
