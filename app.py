@@ -19,13 +19,9 @@ def desc_calc():
     # Write the data dimension (number of molecules and descriptors)
     nmol = desc.shape[0]
     ndesc = desc.shape[1]
-    def header():
-        st.markdown(f'<p style="background-color:#076931;color:#f2eae4;font-size:24px;border-radius:6%">{st.info("Selected fingerprint: " + user_fp)
-                                                                                                         st.info("Number of molecules: " + str(nmol))
-                                                                                                         st.info("Number of descriptors: " + str(ndesc-1))}
-                                                                                                         </p>', unsafe_allow_html=True
-                   )
-
+    st.info("Selected fingerprint: " + user_fp)
+    st.info("Number of molecules: " + str(nmol))
+    st.info("Number of descriptors: " + str(ndesc-1))
     os.remove('molecule.smi')
 
 # File download
