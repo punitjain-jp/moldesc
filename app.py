@@ -17,10 +17,10 @@ def desc_calc():
     st.write(desc)
     st.markdown(filedownload(desc), unsafe_allow_html=True)
     # Write the data dimension (number of molecules and descriptors)
-    def header(info):
-        st.markdown(f'<p style="background-color:#076931;color:#f2eae4;font-size:24px;border-radius:6%;">{info}</p>', unsafe_allow_html=True)
     nmol = desc.shape[0]
     ndesc = desc.shape[1]
+    def header(st.info):
+        st.markdown(f'<p style="background-color:#076931;color:#f2eae4;font-size:24px;border-radius:6%;">{st.info}</p>', unsafe_allow_html=True)
     st.info('Selected fingerprint: ' + user_fp)
     st.info('Number of molecules: ' + str(nmol))
     st.info('Number of descriptors: ' + str(ndesc-1))
